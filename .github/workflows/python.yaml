@@ -1,10 +1,13 @@
 name: Teste
 
-on: [push] # Evento que irá disparar o workflow
+on:
+  push:
+    branches:
+          - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest # Plataforma onde o job será executado
+    runs-on: ubuntu-latest 
 
     steps:
     - name: Checkout repository
@@ -13,7 +16,7 @@ jobs:
     - name: Setup Python version
       uses: actions/setup-python@v2 # Ação para configurar a versão do Python
       with:
-        python-version: '3.12.3' # Versão do Python a ser utilizada
+        python-version: '3.*' # Versão do Python a ser utilizada
 
     - name: Install dependencies
       run: |
