@@ -9,6 +9,6 @@ class Pessoa:
 
     def get_nome(self):
         return f'{self.__nome} {self.__sobrenome}'
-    
+
     def get_idade(self):
         return self.__idade
